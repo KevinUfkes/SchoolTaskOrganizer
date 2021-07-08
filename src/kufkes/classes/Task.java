@@ -29,8 +29,6 @@ public class Task {
         this(that.getId(), that.getName(), that.getWeight(), that.getIsAssigned(), that.getDueDate());
     }
 
-
-
     public int getId() {
         return id;
     }

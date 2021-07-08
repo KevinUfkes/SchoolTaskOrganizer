@@ -3,6 +3,8 @@ package kufkes.classes;
 import kufkes.classes.LinkedList.LLNode;
 import kufkes.classes.LinkedList.LinkedList;
 
+import java.util.Date;
+
 public class ProgramManager {
 
     private static int programIdSeed;
@@ -51,6 +53,27 @@ public class ProgramManager {
             return null;
         }
         return curr.data;
+    }
+
+    public Course getCourseById(int id){
+        LLNode<Program> programCurr;
+        programCurr = programs.head;
+        if(programs.head==null){
+            return null;
+        }
+        while(programCurr!=null){
+            LLNode<Course> courseCurr;
+            courseCurr = programCurr.data.getCourses().head;
+
+            while(courseCurr!=null && courseCurr.data.getId()!=id){
+                courseCurr = courseCurr.next;
+            }
+            if(courseCurr.data.getId()==id){
+                return courseCurr.data;
+            }
+            programCurr = programCurr.next;
+        }
+        return null;
     }
 
     public String tasksByDateAssigned(){
