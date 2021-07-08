@@ -66,6 +66,10 @@ public class ProgramManager {
         return taskSorter.tasksByWeight(programs, true);
     }
 
+    public LinkedList<Program> getPrograms() {
+        return programs;
+    }
+
     public String toString(){
         String s = "Program List: ";
         s += programs.printList();
