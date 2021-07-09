@@ -36,6 +36,11 @@ public class Course {
         taskIdSeed++;
     }
 
+    public void addTask(String name, double weight, boolean isAssigned, Date dueDate){
+        Task tempTask = new Task(taskIdSeed, name, weight, dueDate);
+        taskIdSeed++;
+    }
+
     public int getId() {
         return id;
     }
