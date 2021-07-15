@@ -19,5 +19,6 @@
             <Insets left="10.0" right="10.0" />
          </padding>
       </ButtonBar>
+      <Button fx:id="btnViewTasksHome" layoutX="909.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnViewTasksHome" text="Home" />
    </children>
 </AnchorPane>
