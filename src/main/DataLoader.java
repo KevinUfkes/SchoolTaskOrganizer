@@ -10,7 +10,11 @@ import java.util.Date;
 
 public class DataLoader {
 
-    private ProgramManager pm01;
+    public ProgramManager pm01;
+
+    public ProgramManager getPm01(){
+        return pm01;
+    }
 
     public DataLoader(ProgramManager pm){
         this.pm01 = pm;
@@ -43,26 +47,23 @@ public class DataLoader {
         Date date06 = formatter.parse(tempDateString06);
         Date date07 = formatter.parse(tempDateString07);
 
-
-//        ProgramManager pm01 = new ProgramManager();
-
-        pm01.addProgram("Fruit Proficiency", "F199");
+        pm01.addProgram("Fruit Proficiency", "FP - 607");
         Program fruitProficiency = pm01.getProgramById(1000);
 
-        fruitProficiency.addCourse("Apple Peeling", "APPL-1200");
-        Course applePeeling = fruitProficiency.getCourseById(2000);
+        fruitProficiency.addCourse("Intro to Apple Peeling", "IAPP-999");
+        fruitProficiency.addCourse("Orange Textures", "OTXT-988");
 
-        fruitProficiency.addCourse("Orange Identification", "ORNG-1202");
-        Course orangeProficiency = fruitProficiency.getCourseById(2001);
+        Course introAppPeeling = pm01.getProgramById(1000).getCourseById(2000);
+        Course orangeTextures = pm01.getProgramById(1000).getCourseById(2001);
 
-        applePeeling.addTask("Peeling Race 1", 15.5, false, date01);
-        applePeeling.addTask("Peeling Race 2", 20.5, false, date02);
-        applePeeling.addTask("Peeling Thickness Test", 15.5, false, date06);
-        applePeeling.addTask("Midterm Exam", 25.5, false, date04);
-        applePeeling.addTask("Final Exam", 35.5, false, date07);
+        introAppPeeling.addTask("Peeling Race 1", 10.6, true, date01);
+        introAppPeeling.addTask("Peeling Race 2", 20.5, false, date06);
+        introAppPeeling.addTask("Peeling Race 3", 30.3, true, date03);
+        introAppPeeling.addTask("Peeling Race 4", 22.7, false, date07);
+        introAppPeeling.addTask("Peeling Race 5", 18.9, true, date05);
 
-        orangeProficiency.addTask("Tangerine Deceit", 25.5, false, date03);
-        orangeProficiency.addTask("Lemon Distinction", 74.5, false, date05);
+        orangeTextures.addTask("Peel Orange 1", 50.5, false, date02);
+        orangeTextures.addTask("Peel Orange 2", 49.5, date04);
 
     }
 

@@ -5,22 +5,31 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.DataLoader;
-import main.model.Program;
 import main.model.ProgramManager;
 
 public class Main extends Application {
+    public static ProgramManager pm01;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        ProgramManager pm01 = new ProgramManager();
+        pm01 = new ProgramManager();
         DataLoader dataLoader = new DataLoader(pm01);
         dataLoader.loadData();
 
-        Parent root = FXMLLoader.load(getClass().getResource("view/home.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        System.out.println(pm01.tasksByDateAssigned());
+
+        // Home Scene
+        FXMLLoader homeLoader = new FXMLLoader(getClass().getResource("view/viewTasks.fxml"));
+        Parent homePane = homeLoader.load();
+        Scene homeScene = new Scene(homePane, 1000, 800);
+
+//        HomeController homePaneController = (HomeController) homeLoader.getController();
+//        homePaneController.set
+
+//        Parent root = FXMLLoader.load(getClass().getResource("view/viewTasks.fxml"));
+//        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(homeScene);
         primaryStage.show();
     }
 

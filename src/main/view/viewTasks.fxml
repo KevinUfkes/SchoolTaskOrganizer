@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.ViewTasksController">
+   <children>
+      <Label fx:id="lblTitleHome" alignment="CENTER" layoutX="413.0" layoutY="42.0" prefHeight="33.0" prefWidth="174.0" textAlignment="CENTER" />
+      <TextArea fx:id="taHomeList" layoutX="109.0" layoutY="124.0" prefHeight="585.0" prefWidth="783.0" />
+      <ButtonBar buttonMinWidth="50.0" layoutX="113.0" layoutY="717.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="757.0">
+        <buttons>
+          <Button fx:id="btnViewByDateAll" alignment="CENTER" mnemonicParsing="false" onAction="#btnViewByDateAll" text="View All by Date" textAlignment="CENTER" />
+            <Button fx:id="btnViewByDateAssigned" alignment="CENTER" mnemonicParsing="false" onAction="#btnViewByDateAssigned" prefHeight="25.0" prefWidth="232.0" text="View Assigned by Date" />
+            <Button fx:id="btnViewByWeightAll" alignment="CENTER" mnemonicParsing="false" onAction="#btnViewByWeightAll" text="View All by Weight" />
+            <Button fx:id="btnViewByWeightAssigned" alignment="CENTER" mnemonicParsing="false" onAction="#btnViewByWeightAssigned" text="View Assigned by Weight" />
+        </buttons>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>
