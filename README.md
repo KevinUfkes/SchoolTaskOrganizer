@@ -1,6 +1,6 @@
 # SchoolTaskOrganizer
 
-This program will list and prioritize all tasks worth marks for a student for a whole semester.
+This program lists and prioritizes all tasks worth marks for a student for a whole semester. The tasks can be prioritied by due date or weight and can include or exclude tasks that have not yet been assigned. The application is still under construction, more features will be added soon!
 
 Home Page
 ![HomePage](https://user-images.githubusercontent.com/62268325/127562415-0fcd7455-cd1f-4a30-b783-a40ca50f9734.PNG)
