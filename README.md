@@ -1,5 +1,7 @@
 # SchoolTaskOrganizer
 
+This program will list and prioritize all tasks worth marks for a student for a whole semester.
+
 Home Page
 ![HomePage](https://user-images.githubusercontent.com/62268325/127562415-0fcd7455-cd1f-4a30-b783-a40ca50f9734.PNG)
 
