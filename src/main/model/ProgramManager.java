@@ -53,15 +53,13 @@ public class ProgramManager {
         return curr.data;
     }
 
-    public String tasksByDateAssigned(){
+    public LinkedList<Task> tasksByDateAssigned(){
         return taskSorter.tasksByDate(programs, false);
     }
-    public String tasksByDateAll(){ return taskSorter.tasksByDate(programs, true); }
-
+    public LinkedList<Task> tasksByDateAll(){ return taskSorter.tasksByDate(programs, true); }
     public String tasksByWeightAssigned(){
         return taskSorter.tasksByWeight(programs, false);
     }
-
     public String tasksByWeightAll(){
         return taskSorter.tasksByWeight(programs, true);
     }

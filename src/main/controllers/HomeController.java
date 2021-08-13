@@ -5,8 +5,13 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.swing.text.TableView;
+
 public class HomeController {
     private Scene viewTasksScene;
+    private TableView tvHomeTest;
+
+
 
     public void setViewTasksPage(Scene scene) {
         viewTasksScene = scene;

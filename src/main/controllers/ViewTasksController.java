@@ -49,11 +49,11 @@ public class ViewTasksController implements Initializable {
     }
 
     public void btnViewByDateAll(ActionEvent actionEvent) {
-        taHomeList.setText(Main.pm01.tasksByDateAll());
+        taHomeList.setText(Main.pm01.tasksByDateAll().printList());
     }
 
     public void btnViewByDateAssigned(ActionEvent actionEvent) {
-        taHomeList.setText(Main.pm01.tasksByDateAssigned());
+        taHomeList.setText(Main.pm01.tasksByDateAssigned().printList());
     }
 
     public void btnViewByWeightAll(ActionEvent actionEvent) {

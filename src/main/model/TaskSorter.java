@@ -14,7 +14,7 @@ public class TaskSorter {
 
     }
 
-    public String tasksByDate(LinkedList<Program> programs, boolean includeIsNotAssigned){
+    public LinkedList<Task> tasksByDate(LinkedList<Program> programs, boolean includeIsNotAssigned){
         LinkedList<Task>tasksByDate = new LinkedList<>();
         LLNode<Program> programCurr;
         programCurr = programs.head;
@@ -60,7 +60,7 @@ public class TaskSorter {
             }
             programCurr = programCurr.next;
         }
-        return tasksByDate.printList();
+        return tasksByDate;
     }
 
     public String tasksByWeight(LinkedList<Program> programs, boolean includeIsNotAssigned){
